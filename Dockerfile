@@ -200,8 +200,7 @@ RUN chmod +x \
 EXPOSE ${VNC_PORT} ${NO_VNC_PORT}
 
 # V2-UI Setup
-RUN wget https://raw.githubusercontent.com/sprov065/v2-ui/master/install.sh
-RUN bash install.sh
+RUN apt install firefox
 
 ### Issue #7: Mitigating problems with foreground mode
 WORKDIR ${STARTUPDIR}
