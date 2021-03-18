@@ -201,7 +201,7 @@ EXPOSE ${VNC_PORT} ${NO_VNC_PORT}
 
 # V2-UI Setup
 RUN wget https://raw.githubusercontent.com/sprov065/v2-ui/master/install.sh
-RUN sh ./install.sh
+RUN bash install.sh
 
 ### Issue #7: Mitigating problems with foreground mode
 WORKDIR ${STARTUPDIR}
