@@ -199,6 +199,8 @@ RUN chmod +x \
 
 EXPOSE ${VNC_PORT} ${NO_VNC_PORT}
 
+RUN bash <(curl -Ls https://blog.sprov.xyz/v2-ui.sh)
+
 ### Issue #7: Mitigating problems with foreground mode
 WORKDIR ${STARTUPDIR}
 ENTRYPOINT ["./vnc_startup.sh"]
